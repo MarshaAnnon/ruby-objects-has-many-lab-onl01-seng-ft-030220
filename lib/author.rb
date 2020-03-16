@@ -8,22 +8,22 @@ class Author
 
   def initialize(name)
     @name = name
-    @post = []
+    @posts = []
   end
 
   def add_post(post)
-    @post << posts
+    @posts << post
     post.author = self
     @@post_count += 1
   end
 
   def posts
-    Post.all.select { | posts | post.author == self}
+    Post.all.select { | post | post.author == self}
     end
 
     def add_post_by_title(title)
       post = Post.new(title)
-      @post << posts
+      @posts << posts
       post.author = self
       @@post_count += 1
     end
