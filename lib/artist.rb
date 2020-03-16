@@ -2,7 +2,7 @@ require "pry"
 
 class Artist
 
-  
+  @@counter = 0
 
   attr_accessor :name
 
