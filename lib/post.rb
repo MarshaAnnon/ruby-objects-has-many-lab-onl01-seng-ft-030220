@@ -2,8 +2,9 @@ require "pry"
 
 class Post
 
-@@all = []
-attr_accessor :title, :author
+  @@all = []
+  attr_accessor :title, :author
+
   def initialize(title)
     @title = title
     @@all << self
@@ -20,4 +21,5 @@ attr_accessor :title, :author
       @author.name
     end
   end
+  
 end
