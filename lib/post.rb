@@ -1,23 +1,15 @@
 require "pry"
 
-class Post
-
-  @@all = []
-
-  attr_accessor :title, :author
-
+attr_accessor :title, :author
   def initialize(title)
     @title = title
-    @author = author
-    save
   end
 
-  def save
-    @@all << self
+  def author_name
+    if @author == nil
+      return nil
+    else
+      @author.name
+    end
   end
-
-  def self.all
-    @@all
-  end
-
 end
