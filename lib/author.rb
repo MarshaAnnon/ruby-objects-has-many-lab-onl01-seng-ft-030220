@@ -2,7 +2,7 @@ require "pry"
 
 class Author
 
-  @@post_count = 1
+  @@post_count = 0
 
   attr_accessor :name, :posts
 
@@ -15,6 +15,7 @@ class Author
     @posts << post
     post.author = self
     @@post_count += 1
+    post = Post.new(title)
   end
 
   def post
