@@ -1,4 +1,4 @@
-require "pri"
+require "pry"
 
 class Song
 
