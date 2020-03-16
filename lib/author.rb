@@ -18,4 +18,14 @@ class Author
     Post.all.select { | posts | post.author == self}
     end
 
+    def add_post_by_title(title)
+      post = Post.new(title)
+      add_post(title)
+      @@post_count += 1
+    end
+
+    def self.song_count
+      @@post_count
+    end
+
   end
