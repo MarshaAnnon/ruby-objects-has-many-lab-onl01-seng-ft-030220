@@ -9,6 +9,10 @@ attr_accessor :title, :author
     @@all << self
   end
 
+  def self.all
+    @@all
+  end
+
   def author_name
     if @author == nil
       return nil
