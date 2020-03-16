@@ -2,11 +2,11 @@ require "pry"
 
 class Author
 
-  attr_accessor :name :author
+  attr_accessor :name
 
   def initialize(name)
     @name = name
-    @author = author
+    @author = self
   end
 
   def posts
